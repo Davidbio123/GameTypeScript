@@ -1,9 +1,9 @@
-import { DiceGames } from './assets/DiceGames'
-import { Heros } from './models/Heros'
-import { Monsters } from './models/Monsters'
+import { DiceGames } from './assets/DiceGames.js'
+import { Heros } from './models/Heros.js'
+import { Monsters } from './models/Monsters.js'
 
-let Gaetan = new Monsters("Gaetan");
-let David = new Heros("David");
+// let Gaetan = new Monsters("Gaetan");
+// let David = new Heros("David");
 
 console.log("merde");
 console.log(DiceGames());
@@ -22,7 +22,7 @@ console.log(DiceGames());
 const btnAdd =  document.querySelector<HTMLButtonElement>("#add")!
 
 const btnRemove =  document.querySelector<HTMLButtonElement>("#removeone")!
-
+const cpt = document.querySelector<HTMLSpanElement> ("#compteur")!
 const warn = document.querySelector<HTMLSpanElement> ("#warning")!
 //ici le ! pour interdire le null
 
@@ -60,7 +60,8 @@ function AddRemove<T extends {button : HTMLSpanElement }>( but : HTMLButtonEleme
     if (but === document.querySelector("#add"))
     {
         ++num
-        warn.innerText= num.toString();
+        cpt.innerText= num.toString();
+        warn.innerText=""
     }
     else
     {
@@ -75,6 +76,7 @@ function AddRemove<T extends {button : HTMLSpanElement }>( but : HTMLButtonEleme
             {
                 warn.innerText=""
                 --num
+                cpt.innerText= num.toString();
             }
         }
     }

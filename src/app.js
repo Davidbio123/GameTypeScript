@@ -1,16 +1,20 @@
-import { DiceGames } from './assets/DiceGames.js';
+"use strict";
+exports.__esModule = true;
+var DiceGames_1 = require("./assets/DiceGames");
+// import { Heros } from './models/Heros'
+// import { Monsters } from './models/Monsters'
 // let Gaetan = new Monsters("Gaetan");
 // let David = new Heros("David");
 console.log("merde");
-console.log(DiceGames());
-console.log(DiceGames());
+console.log((0, DiceGames_1.DiceGames)());
+// console.log(DiceGames());
 /////////////////////////
-const btnAdd = document.querySelector("#add");
-const btnRemove = document.querySelector("#removeone");
-const cpt = document.querySelector("#compteur");
-const warn = document.querySelector("#warning");
+var btnAdd = document.querySelector("#add");
+var btnRemove = document.querySelector("#removeone");
+var cpt = document.querySelector("#compteur");
+var warn = document.querySelector("#warning");
 //ici le ! pour interdire le null
-let num = 0;
+var num = 0;
 // const increment : (e : string | number ) => void = (e : string | number ) =>
 // {
 //     let compteurSpan =<HTMLSpanElement>document.querySelector("#compteur")
@@ -57,17 +61,17 @@ function AddRemove(but) {
     }
     return but;
 }
-btnAdd.addEventListener("click", () => {
+btnAdd.addEventListener("click", function () {
     AddRemove(btnAdd);
 });
-btnRemove.addEventListener("click", () => {
+btnRemove.addEventListener("click", function () {
     AddRemove(btnRemove);
 });
 /////////////////////////////////////////////////////////////////////////////////
 function consoleSize(arg) {
     return arg;
 }
-const af = consoleSize(['3', 2]);
+var af = consoleSize(['3', 2]);
 function gestUsers(arg) {
     return arg.id;
 }
