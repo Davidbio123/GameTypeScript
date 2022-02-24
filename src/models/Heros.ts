@@ -26,20 +26,27 @@ export class Heros implements IPersonnage
     {
         if (pNumber < 5) this.selDefense = 0
         else this.selDefense = 1
+console.log("DICEGAMES IS " +pNumber)
         return this.selDefense
     }
     attackMe(pNumber : number)
     {
-        if(this.selDefense == 1) pNumber = pNumber / 2;
-    
+        let kravmaga :string ="";
+
+        if(this.selDefense == 1)
+        {
+            pNumber = pNumber / 2;
+            kravmaga = "Good Defense, "
+        }
         this.nbrLive = this.nbrLive - pNumber;
+        
     
         if(this.nbrLive <= 0)
         {
             this.Resurrect();
             return "I resurect you !!!"
         }
-        else return "You still have " + this.nbrLive.toString();
+        else return kravmaga + "You still have " + this.nbrLive.toString() + "your attack is " + pNumber;
     }
     
 }

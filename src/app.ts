@@ -2,13 +2,29 @@ import { DiceGames } from './assets/DiceGames.js'
 import { Heros } from './models/Heros.js'
 import { Monsters } from './models/Monsters.js'
 
-// let Gaetan = new Monsters("Gaetan");
-// let David = new Heros("David");
+let Gaetan = new Monsters("Gaetan");
+let David = new Heros("David");
 
 console.log("merde");
-console.log(DiceGames());
-
-console.log(DiceGames());
+console.log(David);
+David.MyDefense(DiceGames())
+console.log(David.attackMe(Gaetan.Attack()))
+console.log(David);
+David.MyDefense(DiceGames())
+console.log(David.attackMe(Gaetan.Attack()))
+console.log(David);
+David.MyDefense(DiceGames())
+console.log(David.attackMe(Gaetan.Attack()))
+console.log(David);
+David.MyDefense(DiceGames())
+console.log(David.attackMe(Gaetan.Attack()))
+console.log(David);
+David.MyDefense(DiceGames())
+console.log(David.attackMe(Gaetan.Attack()))
+console.log(David);
+David.MyDefense(DiceGames())
+console.log(David.attackMe(Gaetan.Attack()))
+console.log(David);
 
 
 

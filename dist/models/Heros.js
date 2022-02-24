@@ -18,17 +18,21 @@ export class Heros {
             this.selDefense = 0;
         else
             this.selDefense = 1;
+        console.log("DICEGAMES IS " + pNumber);
         return this.selDefense;
     }
     attackMe(pNumber) {
-        if (this.selDefense == 1)
+        let kravmaga = "";
+        if (this.selDefense == 1) {
             pNumber = pNumber / 2;
+            kravmaga = "Good Defense, ";
+        }
         this.nbrLive = this.nbrLive - pNumber;
         if (this.nbrLive <= 0) {
             this.Resurrect();
             return "I resurect you !!!";
         }
         else
-            return "You still have " + this.nbrLive.toString();
+            return kravmaga + "You still have " + this.nbrLive.toString() + "your attack is " + pNumber;
     }
 }
